@@ -34,7 +34,7 @@
   color: #b3b3b3;
 }
 
-.appleLogo, .search {
+.appleLogo, .search, .store{
   cursor: pointer;
 }
 
@@ -50,3 +50,27 @@
   height: 100px;
   width: 100px;
 }
+
+.rolledStoreContainer {
+  width: 100%;
+  background-color: black;
+  height: 400px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.moveMenu {
+  display: flex;
+  flex-direction: column;
+  margin-left: 280px;
+
+
+}
+
+.moveMenu > .listTitleContainer > ul > li {
+  list-style: none;
+}
+
