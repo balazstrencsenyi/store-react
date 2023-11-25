@@ -86,9 +86,13 @@
 .moveMenu {
   display: flex;
   flex-direction: column;
-  margin-left: 280px;
+  margin-left: 455px;
 }
 
 .moveMenu > .listTitleContainer > ul > li {
+  list-style: none;
+}
+
+.moveMenu > li{
   list-style: none;
 }
