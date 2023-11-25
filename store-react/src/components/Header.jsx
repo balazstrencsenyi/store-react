@@ -104,27 +104,22 @@ function Header() {
     } else if (openItem === 'support') {
       return (
         <div className='rolledStoreContainer'>
-          <div className='moveMenu'>
+          <div className='moveMenu' id='supportContainer'>
             <form>
               <h1>How can we help you?</h1>
               <input type='text' placeholder='Please write the issue..' />
               <button type='submit'>Send</button>           
             </form>
-            <div className='contact'>
-              <h1>Contact Us</h1>
-              <a href="+36302631920">+36302631920</a>
-              <a href="aiwatch@support.hu">aiwatch@support.hu</a>
-            </div>
           </div>
         </div>
       );
     } else if (openItem === 'search') {
       return (
         <div className='rolledStoreContainer'>
-          <div className='moveMenu'>
-            <h1>Search</h1>
-            <input type='text' placeholder='Search...' />
-            <button type='submit'>Search</button>
+          <div className='moveMenu' id='searchContainer'>
+            <h1>What are you looking for?</h1>
+            <input type='text' placeholder='Search..' />
+            <button type='submit'>Go</button>
           </div>
         </div>
       );
