@@ -8,7 +8,7 @@ function Header() {
   };
 
   return (
-    <div className="headerContainer">
+    <div className={`headerContainer ${isStoreOpen ? 'open' : ''}`}>
       <div className="menuContainer">
         <ul>
           <img src="./src/assets/apple.svg" className="appleLogo" alt="Apple Logo" />
@@ -28,19 +28,19 @@ function Header() {
       {isStoreOpen && (
         <div className='rolledStoreContainer'>
           <div className='moveMenu'>
-          <h1>Your Bag is empty.</h1>
-          <div className='signIn'>
-            <a>Sign in</a> to see if you have any saved items
-          </div>
-          <div className='listTitleContainer'>
-            <div className='listTitle'>My Profile</div>
-            <ul>
-              <li>Orders</li>
-              <li>Your Saves</li>
-              <li>Account</li>
-              <li>Sign in</li>
-            </ul>
-          </div>
+            <h1>Your Bag is empty.</h1>
+            <div className='signIn'>
+              <a>Sign in</a> to see if you have any saved items
+            </div>
+            <div className='listTitleContainer'>
+              <div className='listTitle'>My Profile</div>
+              <ul>
+                <li>Orders</li>
+                <li>Your Saves</li>
+                <li>Account</li>
+                <li>Sign in</li>
+              </ul>
+            </div>
           </div>
         </div>
       )}

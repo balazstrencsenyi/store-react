@@ -15,7 +15,28 @@
   top: 0;
   background-color: rgba(42, 42, 42, 0.843);
   width: 100%;
+  transition: background-color 0.7s ease-in-out; /* Add transition for background color */
+}
 
+.headerContainer.open {
+  background-color: black;
+}
+
+.rolledStoreContainer {
+  opacity: 0;
+  transform: translateY(-20px);
+  animation: fadeInUp 0.7s ease-in-out forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .menuContainer > ul {
@@ -34,7 +55,7 @@
   color: #b3b3b3;
 }
 
-.appleLogo, .search, .store{
+.appleLogo, .search, .store {
   cursor: pointer;
 }
 
@@ -66,11 +87,8 @@
   display: flex;
   flex-direction: column;
   margin-left: 280px;
-
-
 }
 
 .moveMenu > .listTitleContainer > ul > li {
   list-style: none;
 }
-
