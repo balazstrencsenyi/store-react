@@ -29,10 +29,24 @@
   font-size: 15px;
 }
 
-.menuContainer > ul > li {
+.menuContainer > ul > li:hover {
   cursor: pointer;
+  color: #b3b3b3;
 }
 
 .appleLogo, .search {
   cursor: pointer;
+}
+
+.uploadPageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.card > img {
+  height: 100px;
+  width: 100px;
 }
