@@ -8,7 +8,7 @@ function Header() {
   };
 
   const renderContent = () => {
-    if (openItem === 'store') {
+    if (openItem === 'bag') {
       return (
         <div className='rolledStoreContainer'>
           <div className='moveMenu'>
@@ -104,7 +104,7 @@ function Header() {
     } else if (openItem === 'support') {
       return (
         <div className='rolledStoreContainer'>
-          <div className='supportContainer'>
+          <div className='moveMenu'>
             <form>
               <h1>How can we help you?</h1>
               <input type='text' placeholder='Please write the issue..' />
@@ -118,7 +118,34 @@ function Header() {
           </div>
         </div>
       );
-    }
+    } else if (openItem === 'search') {
+      return (
+        <div className='rolledStoreContainer'>
+          <div className='moveMenu'>
+            <h1>Search</h1>
+            <input type='text' placeholder='Search...' />
+            <button type='submit'>Search</button>
+          </div>
+        </div>
+      );
+    } else if (openItem === 'store') {
+      return (
+        <div className='rolledStoreContainer'>
+          <div className='moveMenu'>
+          <h1>Store content goes here..</h1>
+          </div>
+        </div>
+      );
+    } else if (openItem === 'apple') {
+      return (
+        <div className='rolledStoreContainer'>
+          <div className='moveMenu'>
+          <h1>Home Page..</h1>
+          </div>
+        </div>
+      );
+    } 
+      
 
     return null; // Return null if no item is open
   };
@@ -127,7 +154,7 @@ function Header() {
     <div className={`headerContainer ${openItem ? 'open' : ''}`}>
       <div className="menuContainer">
         <ul>
-          <img src="./src/assets/apple.svg" className="appleLogo" alt="Apple Logo" />
+          <img src="./src/assets/apple.svg" className="appleLogo" onClick={() => handleItemClick('apple')} />
           <li onClick={() => handleItemClick('store')}>Store</li>
           <li onClick={() => handleItemClick('mac')}>Mac</li>
           <li onClick={() => handleItemClick('ipad')}>iPad</li>
@@ -136,8 +163,8 @@ function Header() {
           <li onClick={() => handleItemClick('airpods')}>AirPods</li>
           <li onClick={() => handleItemClick('accessories')}>Accessories</li>
           <li onClick={() => handleItemClick('support')}>Support</li>
-          <img src="./src/assets/search.svg" className="search" alt="Search Icon" />
-          <img src="./src/assets/store.svg" className="store" onClick={() => handleItemClick('store')} alt="Store Icon" />
+          <img src="./src/assets/search.svg" className="search" onClick={() => handleItemClick('search')} />
+          <img src="./src/assets/store.svg" className="store" onClick={() => handleItemClick('bag')} alt="Store Icon" />
         </ul>
       </div>
 
