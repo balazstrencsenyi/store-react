@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import RenderHomePage from './renderHomePage';
 
 function Header() {
   const [openItem, setOpenItem] = useState(null);
@@ -131,13 +130,8 @@ function Header() {
           </div>
         </div>
       );
-    } else if (openItem === 'apple') {
-      return (
-        <RenderHomePage />
-      );
     } 
       
-
     return null; // Return null if no item is open
   };
 

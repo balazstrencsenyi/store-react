@@ -4,9 +4,9 @@
   box-sizing: border-box;
 }
 
-.root {
+.App {
   width: 100%;
-  height: 100%;
+  height: 300vh;
 }
 
 .headerContainer {
@@ -182,6 +182,32 @@ form > button:hover {
 .listTitle:hover {
   color: #b3b3b3;
 }
+
+.homePageContainer {
+  margin-top: 50px;
+}
+
+.firstSlide {
+  width: 100%;
+  height: 70vh;
+  background-color: chartreuse;
+}
+
+.secondSlide {
+  width: 100%;
+  height: 70vh;
+  background-color: blueviolet;
+}
+
+.thirdSlide {
+  width: 100%;
+  height: 70vh;
+  background-color: coral;
+}
+
+
+
+
 
 
 
