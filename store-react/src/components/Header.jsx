@@ -1,20 +1,18 @@
 import { useState } from "react";
 import SignIn from "./handleSignIn";
 import SignUp from "./handleSignUp";
-//import AuthDetails from './AuthDetails';
+import AuthDetails from './AuthDetails';
 
 function Header() {
   const [openItem, setOpenItem] = useState(null);
 
-const handleItemClick = (item) => {
-  if (item === 'sign-in' || item === 'sign-up') {
-    // Open the appropriate form
-    setOpenItem(item);
-  } else {
-    setOpenItem((prevItem) => (prevItem === item && item !== 'apple' ? null : item));
-  }
-};
-
+ const handleItemClick = (item) => {
+    if (item === 'sign-in' || item === 'sign-up') {
+      setOpenItem(item);
+    } else {
+      setOpenItem((prevItem) => (prevItem === item && item !== 'apple' ? null : item));
+    }
+  };
 
   const renderContent = () => {
     if (openItem === "bag") {
@@ -186,8 +184,9 @@ const handleItemClick = (item) => {
       </div>
 
        {openItem === 'sign-in' && <SignIn />}
-    {openItem === 'sign-up' && <SignUp />}
-    {renderContent()}
+      {openItem === 'sign-up' && <SignUp />}
+      <AuthDetails /> {/* Include AuthDetails component here */}
+      {renderContent()}
     </div>
   );
 }
