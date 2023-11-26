@@ -167,6 +167,22 @@ form > button:hover {
   color: black;
 }
 
+.bagItems {
+  cursor: pointer;
+}
+
+.bagItems:hover {
+  color: #b3b3b3;
+}
+
+.listTitle {
+  cursor: pointer;
+}
+
+.listTitle:hover {
+  color: #b3b3b3;
+}
+
 
 
 

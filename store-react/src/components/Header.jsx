@@ -1,10 +1,11 @@
 import { useState } from 'react';
+import RenderHomePage from './renderHomePage';
 
 function Header() {
   const [openItem, setOpenItem] = useState(null);
 
   const handleItemClick = (item) => {
-    setOpenItem((prevItem) => (prevItem === item ? null : item));
+     setOpenItem((prevItem) => (prevItem === item && item !== 'apple' ? null : item));
   };
 
   const renderContent = () => {
@@ -19,10 +20,10 @@ function Header() {
             <div className='listTitleContainer'>
               <div className='listTitle'>My Profile</div>
               <ul>
-                <li>Orders</li>
-                <li>Your Saves</li>
-                <li>Account</li>
-                <li>Sign in</li>
+                <li className='bagItems'>Orders</li>
+                <li className='bagItems'>Your Saves</li>
+                <li className='bagItems'>Account</li>
+                <li className='bagItems'>Sign in</li>
               </ul>
             </div>
           </div>
@@ -32,11 +33,10 @@ function Header() {
       return (
         <div className='rolledStoreContainer'>
           <ul className='moveMenu'>
-            <li>iPhone 11</li>
-            <li>iPhone 12</li>
-            <li>iPhone 13</li>
-            <li>iPhone 14</li>
-            <li>iPhone 15</li>
+            <li>MacBook Air</li>
+            <li>MacBook Pro</li>
+            <li>iMac</li>
+            <li>mac mini</li>
           </ul>
         </div>
       );
@@ -133,11 +133,7 @@ function Header() {
       );
     } else if (openItem === 'apple') {
       return (
-        <div className='rolledStoreContainer'>
-          <div className='moveMenu'>
-          <h1>Home Page..</h1>
-          </div>
-        </div>
+        <RenderHomePage />
       );
     } 
       
