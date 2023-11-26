@@ -20,9 +20,9 @@ function Header() {
               <div className='listTitle'>My Profile</div>
               <ul>
                 <li className='bagItems'>Orders</li>
-                <li className='bagItems'>Your Saves</li>
                 <li className='bagItems'>Account</li>
                 <li className='bagItems'>Sign in</li>
+                <li className='bagItems'>Sign up</li>
               </ul>
             </div>
           </div>
