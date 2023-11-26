@@ -86,7 +86,8 @@
 .moveMenu {
   display: flex;
   flex-direction: column;
-  margin-left: 455px;
+  /*margin-left: 455px;*/
+  margin-left: 15%;
   gap: 10px;
 }
 
@@ -187,7 +188,7 @@ form > button:hover {
   display: flex;
   flex-direction: column;
   margin-top: 50px;
-  gap: 100px;
+  gap: 60px;
 }
 
 .firstSlide {
