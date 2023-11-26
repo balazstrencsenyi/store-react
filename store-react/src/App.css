@@ -248,6 +248,7 @@ form > button:hover {
   justify-content: center;
   width: 100%;
   padding-bottom: 10px;
+  gap: 12px;
 }
 
 .signInContainer > form > .authTextField {
