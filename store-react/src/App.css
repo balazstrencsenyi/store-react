@@ -219,6 +219,26 @@ form > button:hover {
   width: 100%;
 }
 
+.signInContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 320px;
+  width: 600px;
+  background-color: rgba(255, 255, 255, 0.81);
+
+  position: absolute;
+  top: 50px;
+  right: 0;
+  border-radius: 15px;
+}
+
+.signInContainer > form > input {
+  height: 40px;
+}
+
 
 
 
