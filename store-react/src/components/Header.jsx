@@ -1,6 +1,7 @@
 import { useState } from "react";
 import SignIn from "./handleSignIn";
 import SignUp from "./handleSignUp";
+import AuthDetails from "./AuthDetails";
 
 function Header() {
   const [openItem, setOpenItem] = useState(null);
@@ -19,8 +20,11 @@ function Header() {
         <div className="rolledStoreContainer">
           <div className="moveMenu">
             <h1>Your Bag is empty.</h1>
+            <div className="goodOrder">
             <div className="signIn">
-              <a>Sign in</a> to see if you have any saved items
+              Your current status is 
+            </div>
+            <div className="statusRolled"><AuthDetails/></div>
             </div>
             <div className="listTitleContainer">
               <div className="listTitle">My Profile</div>
