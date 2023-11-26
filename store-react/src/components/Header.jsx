@@ -2,15 +2,19 @@ import { useState } from "react";
 import SignIn from "./handleSignIn";
 import SignUp from "./handleSignUp";
 import AuthDetails from "./AuthDetails";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemText from "@mui/material/ListItemText";
 
 function Header() {
   const [openItem, setOpenItem] = useState(null);
 
- const handleItemClick = (item) => {
-    if (item === 'sign-in' || item === 'sign-up') {
+  const handleItemClick = (item) => {
+    if (item === "sign-in" || item === "sign-up") {
       setOpenItem(item);
     } else {
-      setOpenItem((prevItem) => (prevItem === item && item !== 'apple' ? null : item));
+      setOpenItem((prevItem) =>
+        prevItem === item && item !== "apple" ? null : item
+      );
     }
   };
 
@@ -21,10 +25,10 @@ function Header() {
           <div className="moveMenu">
             <h1>Your Bag is empty.</h1>
             <div className="goodOrder">
-            <div className="signIn">
-              Your current status is 
-            </div>
-            <div className="statusRolled"><AuthDetails/></div>
+              <div className="signIn">Your current status is</div>
+              <div className="statusRolled">
+                <AuthDetails />
+              </div>
             </div>
             <div className="listTitleContainer">
               <div className="listTitle">My Profile</div>
@@ -52,10 +56,18 @@ function Header() {
       return (
         <div className="rolledStoreContainer">
           <ul className="moveMenu">
-            <li>MacBook Air</li>
-            <li>MacBook Pro</li>
-            <li>iMac</li>
-            <li>mac mini</li>
+            <ListItemButton component="a" href="#simple-list">
+              <ListItemText primary="MacBook Air" className="rolledLists" />
+            </ListItemButton>
+            <ListItemButton component="a" href="#simple-list">
+              <ListItemText primary="MacBook Pro" className="rolledLists" />
+            </ListItemButton>
+            <ListItemButton component="a" href="#simple-list">
+              <ListItemText primary="iMac" className="rolledLists" />
+            </ListItemButton>
+            <ListItemButton component="a" href="#simple-list">
+              <ListItemText primary="Mac Mini" className="rolledLists" />
+            </ListItemButton>
           </ul>
         </div>
       );
@@ -63,12 +75,18 @@ function Header() {
       return (
         <div className="rolledStoreContainer">
           <ul className="moveMenu">
-            <li>iPad Pro 2022</li>
-            <li>iPad 2022</li>
-            <li>iPad Air 2022</li>
-            <li>iPad Pro 2021</li>
-            <li>iPad 2021</li>
-            <li>iPad mini 2021</li>
+            <ListItemButton component="a" href="#simple-list">
+              <ListItemText primary="iPad Pro 2022" className="rolledLists" />
+            </ListItemButton>
+            <ListItemButton component="a" href="#simple-list">
+              <ListItemText primary="iPad 2022" className="rolledLists" />
+            </ListItemButton>
+            <ListItemButton component="a" href="#simple-list">
+              <ListItemText primary="iPad Air 2022" className="rolledLists" />
+            </ListItemButton>
+            <ListItemButton component="a" href="#simple-list">
+              <ListItemText primary="iPad Pro 2021" className="rolledLists" />
+            </ListItemButton>
           </ul>
         </div>
       );
@@ -76,13 +94,18 @@ function Header() {
       return (
         <div className="rolledStoreContainer">
           <ul className="moveMenu">
-            <li>iPhone 15 Pro</li>
-            <li>iPhone 15</li>
-            <li>iPhone 14 Pro</li>
-            <li>iPhone 14</li>
-            <li>iPhone 13</li>
-            <li>iPhone 12</li>
-            <li>iPhone 11</li>
+            <ListItemButton component="a" href="#simple-list">
+              <ListItemText primary="iPhone 15 Pro" className="rolledLists" />
+            </ListItemButton>
+            <ListItemButton component="a" href="#simple-list">
+              <ListItemText primary="iPhone 15 " className="rolledLists" />
+            </ListItemButton>
+            <ListItemButton component="a" href="#simple-list">
+              <ListItemText primary="iPhone 14 Pro" className="rolledLists" />
+            </ListItemButton>
+            <ListItemButton component="a" href="#simple-list">
+              <ListItemText primary="iPhone 14" className="rolledLists" />
+            </ListItemButton>
           </ul>
         </div>
       );
@@ -90,11 +113,18 @@ function Header() {
       return (
         <div className="rolledStoreContainer">
           <ul className="moveMenu">
-            <li>Apple Watch Ultra 2</li>
-            <li>Apple Watch Series 9</li>
-            <li>Apple Watch Series 8</li>
-            <li>Apple Watch Series SE 2023</li>
-            <li>Apple Watch Series SE 2022</li>
+            <ListItemButton component="a" href="#simple-list">
+              <ListItemText primary="Apple Watch Series 9" className="rolledLists" />
+            </ListItemButton>
+            <ListItemButton component="a" href="#simple-list">
+              <ListItemText primary="Apple Watch Series 8" className="rolledLists" />
+            </ListItemButton>
+            <ListItemButton component="a" href="#simple-list">
+              <ListItemText primary="Apple Watch Series SE 2022" className="rolledLists" />
+            </ListItemButton>
+            <ListItemButton component="a" href="#simple-list">
+              <ListItemText primary="Apple Watch Series SE 2023" className="rolledLists" />
+            </ListItemButton>
           </ul>
         </div>
       );
@@ -102,10 +132,18 @@ function Header() {
       return (
         <div className="rolledStoreContainer">
           <ul className="moveMenu">
-            <li>AirPods 2</li>
-            <li>AirPods 3</li>
-            <li>AirPods Pro</li>
-            <li>AirPods Pro 2</li>
+            <ListItemButton component="a" href="#simple-list">
+              <ListItemText primary="AirPods 2" className="rolledLists" />
+            </ListItemButton>
+            <ListItemButton component="a" href="#simple-list">
+              <ListItemText primary="AirPods 3" className="rolledLists" />
+            </ListItemButton>
+            <ListItemButton component="a" href="#simple-list">
+              <ListItemText primary="AirPods Pro" className="rolledLists" />
+            </ListItemButton>
+            <ListItemButton component="a" href="#simple-list">
+              <ListItemText primary="AirPods 2" className="rolledLists" />
+            </ListItemButton>
           </ul>
         </div>
       );
@@ -113,10 +151,18 @@ function Header() {
       return (
         <div className="rolledStoreContainer">
           <ul className="moveMenu">
-            <li>iPhone Accessories</li>
-            <li>iPad Accessories</li>
-            <li>Mac Accessories</li>
-            <li>Apple Watch Accessories</li>
+            <ListItemButton component="a" href="#simple-list">
+              <ListItemText primary="iPhone Accessories" className="rolledLists" />
+            </ListItemButton>
+            <ListItemButton component="a" href="#simple-list">
+              <ListItemText primary="iPad Accessories" className="rolledLists" />
+            </ListItemButton>
+            <ListItemButton component="a" href="#simple-list">
+              <ListItemText primary="Mac Accessories" className="rolledLists" />
+            </ListItemButton>
+            <ListItemButton component="a" href="#simple-list">
+              <ListItemText primary="Apple Watch Accessories" className="rolledLists" />
+            </ListItemButton>
           </ul>
         </div>
       );
@@ -126,7 +172,11 @@ function Header() {
           <div className="moveMenu" id="supportContainer">
             <form>
               <h1>How can we help you?</h1>
-              <input type="text" placeholder="Please write your quesiton here" />
+              <input type="text" placeholder="Your Email" id="supportEmail" />
+              <input
+                type="text"
+                placeholder="Please write your quesiton here"
+              />
               <button type="submit">Send</button>
             </form>
           </div>
@@ -186,8 +236,8 @@ function Header() {
         </ul>
       </div>
 
-       {openItem === 'sign-in' && <SignIn />}
-      {openItem === 'sign-up' && <SignUp />}
+      {openItem === "sign-in" && <SignIn />}
+      {openItem === "sign-up" && <SignUp />}
       {renderContent()}
     </div>
   );

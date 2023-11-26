@@ -107,10 +107,10 @@
 }
 
 
-form {
+.moveMenu > form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 
 form > h1 {
@@ -139,6 +139,12 @@ form > button {
 form > button:hover {
   background-color: #ffffff;
   color: black;
+}
+
+#searchContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 #searchContainer > h1 {
@@ -275,6 +281,10 @@ form > button:hover {
   justify-content: center;
   align-items: center;
   height: 100%;
+}
+
+#supportEmail {
+  height: 30px;
 }
 
 
