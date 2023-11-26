@@ -235,8 +235,32 @@ form > button:hover {
   border-radius: 15px;
 }
 
-.signInContainer > form > input {
-  height: 40px;
+.signInContainer > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.signInContainer > form > .authTextField {
+  width: 60%;
+}
+
+.status {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 5%;
+}
+
+.signInContainer > .escapeAuth {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
 }
 
 

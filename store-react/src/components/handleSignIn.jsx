@@ -2,6 +2,8 @@ import { useState } from "react";
 import { auth } from "../firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import AuthDetails from './AuthDetails';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
@@ -17,23 +19,34 @@ const SignIn = () => {
     })
   };
 
+  const escapeAuth = () => {
+    document.querySelector('.signInContainer').style.display = 'none';
+  }
+
   return (
     <div className="signInContainer">
+      <Button variant="outlined" className="escapeAuth" onClick={escapeAuth}>X</Button>
       <form onSubmit={signIn}>
-        <h1>log in to your account</h1>
-        <input
-          type="email"
-          placeholder="email"
+        <h1>Log in to your account</h1>
+        <TextField
+          className="authTextField"
+          id="outlined-basic"
+          label="Email"
+          variant="outlined"
+          type="Email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <input
+        <TextField
+          className="authTextField"
+          id="outlined-basic"
+          label="Password"
+          variant="outlined"
           type="password"
-          placeholder="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">log in</button>
+        <Button variant="outlined" type="submit">log in</Button>
       </form>
       <AuthDetails />
     </div>

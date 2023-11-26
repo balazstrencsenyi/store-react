@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { auth } from "../firebase";
 import { onAuthStateChanged, signOut } from "firebase/auth";
+import Button from '@mui/material/Button';
 
 const AuthDetails = () => {
   const [authUser, setAuthUser] = useState(null);
@@ -30,12 +31,12 @@ const AuthDetails = () => {
   };
 
   return (
-    <div>
+    <div className="status">
       {authUser ? (
         <>
           {" "}
           <p>{`Signed In as ${authUser.email}`}</p>{" "}
-          <button onClick={userSignOut}>Sign Out</button>
+          <Button variant="outlined" onClick={userSignOut}>Sign Out</Button>
         </>
       ) : (
         <p>Signed Out</p>
