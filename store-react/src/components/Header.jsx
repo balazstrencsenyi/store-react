@@ -1,7 +1,6 @@
 import { useState } from "react";
 import SignIn from "./handleSignIn";
 import SignUp from "./handleSignUp";
-import AuthDetails from './AuthDetails';
 
 function Header() {
   const [openItem, setOpenItem] = useState(null);
@@ -185,7 +184,6 @@ function Header() {
 
        {openItem === 'sign-in' && <SignIn />}
       {openItem === 'sign-up' && <SignUp />}
-      <AuthDetails /> {/* Include AuthDetails component here */}
       {renderContent()}
     </div>
   );
