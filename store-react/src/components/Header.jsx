@@ -126,7 +126,7 @@ function Header() {
           <div className="moveMenu" id="supportContainer">
             <form>
               <h1>How can we help you?</h1>
-              <input type="text" placeholder="Please write the issue.." />
+              <input type="text" placeholder="Please write your quesiton here" />
               <button type="submit">Send</button>
             </form>
           </div>
