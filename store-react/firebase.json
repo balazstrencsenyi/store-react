@@ -1,0 +1,21 @@
+{
+  "functions": {
+    "source": "functions"
+  },
+  "hosting": {
+    "site": "store-react-7654b",
+    "public": "public",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+  
+}
